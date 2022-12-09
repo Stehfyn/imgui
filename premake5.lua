@@ -1,13 +1,15 @@
 project "ImGui"
 	kind "StaticLib"
 	language "C++"
-    staticruntime "off"
-
+    --staticruntime "off"
+	staticruntime "on"
+	
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
 	files
 	{
+		"premake5.lua",
 		"imconfig.h",
 		"imgui.h",
 		"imgui.cpp",
